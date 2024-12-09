@@ -1,0 +1,497 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  height: 100%;
+}
+
+
+#barra-navegacion {
+  background-color: #ffffff; 
+  color: #000000; 
+  padding: 20px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  
+}
+
+
+#titulo-principal  {
+  text-align: center;
+  font-size: 3em;  
+  margin: 10px; 
+  margin-bottom: 15px; 
+  letter-spacing: 1px;  
+  color: #090909; 
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+nav ul {
+  list-style-type: none;  
+  display: flex;  
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;  
+  padding: 0;
+  margin: 0;
+}
+
+
+nav a {
+  text-decoration: none;  
+  color: #000000; 
+  font-family: 'Arial', sans-serif;
+  font-size: 1em; 
+  padding: 5px 10px;
+  transition: all 0.6s ease;  
+}
+
+
+nav a:hover {
+  font-size: 1.1em; 
+  color: #000000;  
+  
+  letter-spacing: 3px;  
+}
+
+
+#logo img {
+  width: 100px; 
+  height: auto;
+}
+
+#carrito {
+  position: relative; 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center; 
+}
+
+#carrito i {
+  font-size: 1.5em;
+  color: #000000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#carrito i:hover {
+  font-size: 1.9em;
+}
+
+.cart-count {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  transform: translate(-10px, -10px); 
+}
+
+
+
+
+#rolex-portada{
+  padding:48px ;
+  background-color: #000000;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
+}
+#rolex-portada img{
+  width: 310px;
+  border-radius: 8px;
+  height: auto;
+  margin-left: 8px;
+  
+}
+
+.titulo-portada{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8em; 
+  font-weight: bold; 
+  margin: 0;
+  color: #ffffff;
+}
+
+.descripcion-portada{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2em;
+  line-height: 1.6; 
+ 
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #f4f4f4;
+  color: #000;
+  padding: 40px 20px; 
+  position: relative; 
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; 
+  margin-top: auto; 
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 30px; 
+}
+
+.footer-section {
+  flex: 1; 
+  margin-right: 20px; 
+}
+
+.footer-section h2, .footer-section h3 {
+  margin-bottom: 10px; 
+}
+
+.footer-section h2{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+}
+.footer-section ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  
+}
+
+.footer-section ul li a {
+  color: #000;
+  text-decoration: none; 
+  font-size: 1.1em;
+  transition: color 0.3s; 
+}
+
+
+
+
+.footer-bottom {
+  text-align: center; 
+  font-size: 0.9em; 
+  color: #333; 
+}
+
+.footer-bottom p {
+  margin: 0;
+} 
+
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card {
+  
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  overflow: hidden; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  text-align: center;
+  padding: 20px;
+  height: auto 
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333; 
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #191919; 
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  color: #000000;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+#perfume-2 img{
+   width: 14%;
+   border-radius: 3px;
+}
+
+#perfume-2{
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  background-color: #cba27677;
+  margin: 75px;
+  border-radius: 5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.texto-perfume{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  margin-left: auto;
+  gap: 40px;
+}
+
+.texto-perfume p{
+  font-size: 24px;
+}
+
+
+.btn-agregar-carrito {
+  background-color: #cd9359a5; 
+  color: #333;
+  padding: 12px 25px; 
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  text-align: center;
+}
+
+
+.btn-agregar-carrito:hover {
+  background-color: #f2c29b; 
+  transform: scale(1.05);
+}
+
+
+.btn-agregar-carrito:active {
+  transform: scale(1);
+}
+
+
+
+#contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 60px;
+  margin-top: 50px;
+  
+  max-width: 890px;
+  margin: auto;
+  background: linear-gradient(to right, #413829, #282728, #CC5A1A);
+  
+  border-radius: 8px;
+
+}
+
+
+.perfume-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+
+.perfume-card img {
+  width: 100%;
+  height: 350px;
+  object-fit:cover ;
+  
+  display: block;
+}
+
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff; 
+  padding: 20px;
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  z-index: 1; 
+}
+
+
+.perfume-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(1, 1, 1, 0.15); 
+}
+
+
+.perfume-card:hover .card-info {
+  opacity: 1;
+}
+
+
+.nombre-perfume {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  margin: 12px;
+}
+
+.precio-perfume {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1em;
+  margin-bottom: 55%;
+}
+
+.boton-perfume {
+  background-color: #ffffff; 
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30%;
+}
+
+.boton-perfume:hover {
+  background-color: #040404;
+  color: #fff;
+}
+
+#imagen-medio {
+  margin-top: -70px;
+  overflow: hidden; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+.texto-chanel {
+  width: 40%;
+  margin-left: 21%;
+  font-size: 2em;
+  font-family:  "Dancing Script", cursive;
+  word-spacing: 9px;
+  
+ 
+}
+
+.texto-chanel p{
+  padding: 30px;
+  text-align: center;
+}
+
+#imagen-medio img {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  width: 500px;
+  height: auto;
+  border-radius: 19px;
+  
+}
+
+.mensaje-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.mensaje-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.mensaje-container button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mensaje-container button:hover {
+  text-decoration: underline;
+}
