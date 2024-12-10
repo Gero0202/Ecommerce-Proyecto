@@ -10,7 +10,7 @@ const Footer = () => {
                         <p>Elegancia y sofisticación en cada fragancia.</p>
                     </div>
                     <div className="footer-section">
-                        <h3>Enlaces Rápidos</h3>
+                        <h3>Enlaces Rapidos</h3>
                         <ul>
                             <li><a href="#">Inicio</a></li>
                             <li><a href="#">Acerca de Nosotros</a></li>
