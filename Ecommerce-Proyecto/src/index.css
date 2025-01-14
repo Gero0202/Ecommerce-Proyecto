@@ -14,7 +14,7 @@ body{
   background-color: #ffffff; 
   color: #000000; 
   padding: 20px; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  
   
 }
 
@@ -44,7 +44,9 @@ nav ul {
   margin: 0;
 }
 
-
+nav{
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
+}
 nav a {
   text-decoration: none;  
   color: #000000; 
@@ -216,7 +218,7 @@ footer {
   gap: 20px;
   padding: 20px;
   margin-top: 50px;
-  max-width: 1100px;
+  
   margin-left: auto;
   margin-right: auto;
 }
@@ -234,15 +236,19 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   text-align: center;
   padding: 20px;
-  height: auto 
+  height: 630px; 
+  min-height: 250px; 
+  position: relative; 
 }
 
 .card img {
   width: 100%;
+
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  height: 100%;
+  height: 60%;
+  
 }
 
 .card-title {
@@ -282,6 +288,10 @@ footer {
 .card:hover {
   transform: translateY(-5px); 
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.item-list {
+  display: contents;
 }
 
 #perfume-2 img{
@@ -494,4 +504,249 @@ footer {
 
 .mensaje-container button:hover {
   text-decoration: underline;
+}
+
+
+/*      Sobre nosotros               */
+
+.nosotros-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 90px;
+}
+
+.text-sobre-nosotros {
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.text-sobre-nosotros strong {
+  font-weight: bold;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.intro-section h2 {
+  font-size: 24px;
+  color: #555;
+}
+
+/* CONTACTO */
+
+.contact-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:  0.5s ease
+
+}
+
+.contact-container:hover{
+  background-color: #000;
+  color: #ffffff;
+}
+
+.contact-container:hover .submit-button{
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ffffff;
+}
+
+
+.contact-container h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.content-contact {
+  margin-bottom: 30px;
+}
+
+.text-contact {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: auto;
+}
+
+
+
+/* NOVEDADES */
+
+.content-news {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 80px;
+  margin-top: 70px;
+}
+
+.text-news {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+
+}
+
+.news-list {
+  margin-top: 20px;
+}
+
+.news-item {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.news-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(255, 254, 254);
+}
+
+.news-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.news-description {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: 'Arial', sans-serif;
+
+}
+
+/* LINK DE VER DETALLE */
+
+.details-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.details-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* CONTENIDO DEL DETALLE */
+
+.detalle-container {
+  max-width: 80%;
+  max-height: auto;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 4.1);
+  text-align: center;
+}
+
+.detalle-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.detalle-container img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detalle-container p {
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.detalle-container .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
 }

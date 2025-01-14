@@ -1,43 +1,54 @@
-import React, {useState} from "react"
-import Header from "./component/Header"
-import PortadaDos from "./component/PortadaDos"
-import PortadaInicial from "./component/PortadaInicial"
-import Productos from "./component/Productos"
-import Coleccion from "./component/Coleccion"
-import FotoTexto from "./component/FotoTexto"
-import Footer from "./component/Footer"
-import Mensaje from "./component/AgregadoCarrito"
-
-
+import React, { useState } from "react"
+import Header from "./pages/Header"
+import Footer from "./pages/Footer"
+import MainPage from "./pages/MainPage"
+import Nosotros from "./pages/Nosotros"
+import Contacto from "./pages/Contacto"
+import Navegacion from "./pages/Navegacion"
+import Novedades from "./pages/Novedades"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import DetalleProducto from "./pages/Detalle"
 
 function App() {
-  
-  
-    const [totalItems, setTotalItems] = useState(0)
-    const [showMensaje, setShowMensaje] = useState(false)
-    
-  
-    
-  const handleAddToCart = (quantity) => {
+
+
+  const [totalItems, setTotalItems] = useState(0)
+  const [showMensaje, setShowMensaje] = useState(false)
+  const [nombreProducto, setNombreProducto] = useState('')
+
+
+  const handleAddToCart = (quantity, nombreProducto) => {
     setTotalItems((prevTotal) => prevTotal + quantity)
+    setNombreProducto(nombreProducto)
     setShowMensaje(true)
   }
 
   return (
     <>
-      <Header totalItems={totalItems}/>
-      <PortadaInicial/>
-      <Productos onAddToCart={handleAddToCart}/>
-      <PortadaDos onAddToCart={handleAddToCart}/>
-      <Coleccion onAddToCart={handleAddToCart}/>
-      <FotoTexto onAddToCart={handleAddToCart}/>
-      <Footer/>
-      {showMensaje && (
-        <Mensaje
-          mensaje="Agregado al carrito"
-          onClose={() => setShowMensaje(false)}
-        />
-      )}
+      <Router>
+        <Header />
+        <Navegacion totalItems={totalItems} />
+
+        <Routes>
+          <Route path="/" element={
+            <MainPage
+              totalItems={totalItems}
+              handleAddToCart={handleAddToCart}
+              showMensaje={showMensaje}
+              nombreProducto={nombreProducto}
+              setShowMensaje={setShowMensaje}
+            />
+          } />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/novedades" element={<Novedades />} />
+          <Route path="/producto/:id" element={<DetalleProducto />} />
+          <Route path="*" element={<h1>404 - Página no encontrada</h1>} /> 
+        </Routes>
+        <Footer />
+      </Router>
+
+
     </>
   )
 }

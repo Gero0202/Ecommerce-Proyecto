@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const AgregadoCarrito = ({ mensaje, onClose, duracion = 3000 }) => {
+const AgregadoCarrito = ({ mensaje, onClose, duracion = 3000, nombreProducto }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose()
@@ -11,7 +11,7 @@ const AgregadoCarrito = ({ mensaje, onClose, duracion = 3000 }) => {
 
   return (
     <div className="mensaje-container">
-      <p>{mensaje}</p>
+      <p>{mensaje} {nombreProducto}</p>
       <button onClick={onClose}>Cerrar</button>
     </div>
   )

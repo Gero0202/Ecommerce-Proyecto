@@ -31,7 +31,7 @@ const styles = {
     counterDisplay: {
       color: "black",
       fontSize: '22px',
-      margin: '0 15px',
+      margin: '0 10px',
     },
     addButton: {
       marginTop: '15px',

@@ -3,6 +3,10 @@ import imgPortadaDos from "../img/dolcegabbanaperfume.jpg"
 
 const PortadaDos = ({ onAddToCart }) => {
   
+ 
+    const product = {
+      nombre: "Dolce & Gabbana The Only One"
+    }
 
   return (
     <div id="perfume-2">
@@ -19,7 +23,7 @@ const PortadaDos = ({ onAddToCart }) => {
         </p>
         <button
           className="btn-agregar-carrito"
-          onClick={() => onAddToCart(1)} 
+          onClick={() => onAddToCart(1, product.nombre)} 
         >
           Agregar al carrito
         </button>
