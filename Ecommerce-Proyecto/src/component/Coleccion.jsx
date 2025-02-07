@@ -21,7 +21,8 @@ const Coleccion = () => {
     <div id="contenedor">
       {data.map((product) => (
         <div className="perfume-card" key={product.id}>
-          <img src={product.img} alt={product.name} />
+           <img src={product.img.startsWith('/src/') ? product.img : `/src/${product.img}`} alt={product.name} />
+          {/* <img src={product.img} alt={product.name} /> */}
           <div className="card-info">
             <p className="nombre-perfume">{product.name}</p>
             <p className="precio-perfume">${product.price}</p>
