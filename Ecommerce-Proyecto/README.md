@@ -70,6 +70,7 @@ VITE_measurementId= tu-key
     ├── config/       # Firebase config
 ```
 
+
 ## Configuracion de Firebase
 
 1. Accede a Firebase Console.
@@ -86,6 +87,12 @@ service cloud.firestore {
   }
 }
 ```
+
+### URL en deploy
+
+El proyecto esta desplegado en Versel en el siguiente URL:
+
+- **[URL Versel](https://ecommerce-proyecto-alpha.vercel.app/)**
 
 ## Aprendizajes y retos
 
