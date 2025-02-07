@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from "../service/style.js"
 
-const ItemsCounts = ({ stock = 10, inicial = 1, onAdd }) => {
+const ItemsCounts = ({ stock , inicial , onAdd }) => {
   const [count, setCount] = useState(inicial)
 
  

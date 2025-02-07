@@ -1,23 +1,25 @@
 import React from "react"
-import imgBoss from "../img/hugoboss.jpg"
-import imgPolo from "../img/poloblackralphlauren.jpg"
-import imgMont from "../img/montblanc.jpg"
+import  useFetch  from "../Hook/useFetch"
+import { useCart } from "../context/CartContext"
+import Loading from "./Loading"
 
 
-const Coleccion = ({ onAddToCart }) => {
+const Coleccion = () => {
 
-  
+  const { data, loading, error } = useFetch("coleccion")
+  const { addToCart } = useCart()
 
-  const productos = [
-    { id: 1, name: "HUGO BOSS The Scent", price: 967, img: imgBoss },
-    { id: 2, name: "RALPH LAUREN Polo Black", price: 890, img: imgPolo },
-    { id: 3, name: "MONT BLANC Legend Night", price: 700, img: imgMont },
-  ]
 
- 
+
   return (
+    <>
+    {loading ? (
+      <Loading/>
+    ) : error ? (
+      <p>Error {error}</p>
+    ): (
     <div id="contenedor">
-      {productos.map((product) => (
+      {data.map((product) => (
         <div className="perfume-card" key={product.id}>
           <img src={product.img} alt={product.name} />
           <div className="card-info">
@@ -25,7 +27,7 @@ const Coleccion = ({ onAddToCart }) => {
             <p className="precio-perfume">${product.price}</p>
             <button
               className="boton-perfume"
-              onClick={() => onAddToCart(1)} 
+              onClick={() => addToCart({ ...product, quantity: 1 })}
             >
               Agregar
             </button>
@@ -33,6 +35,8 @@ const Coleccion = ({ onAddToCart }) => {
         </div>
       ))}
     </div>
+  )} 
+  </>
   )
 }
 

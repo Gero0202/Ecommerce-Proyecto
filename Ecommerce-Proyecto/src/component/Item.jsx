@@ -1,18 +1,29 @@
 import React, { useState } from 'react'
 import ItemsCounts from './ItemsCount'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 
-const Item = ({product, onAddToCart}) => {
+const Item = ({ product, onAddToCart }) => {
 
-    const [showCounter, setShowCounter] = useState(false)
-    const handdleToggleCount = () =>{
-        setShowCounter((prevState) => !prevState)
-    }
+  const [showCounter, setShowCounter] = useState(false)
+  const { addToCart } = useCart()
 
-    const handleAdd = (quantity) =>{
-        onAddToCart(quantity)
-        setShowCounter(false)
-    }
+  const handdleToggleCount = () => {
+    setShowCounter((prevState) => !prevState)
+  }
+
+  const handleAdd = (quantity) => {
+    addToCart({
+      id: product.id, 
+      name: product.name,
+      price: product.price,
+      quantity: quantity  
+    })
+    
+    setShowCounter(false)
+  }
+
+
   return (
     <div className="card">
       <img src={product.img} alt={product.name} />
@@ -30,4 +41,3 @@ const Item = ({product, onAddToCart}) => {
 }
 
 export default Item
-{}

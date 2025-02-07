@@ -13,10 +13,12 @@ const Navegacion = ({ totalItems }) => {
                     <li><Link to="/novedades">NOVEDADES</Link></li>
                     <li>
                         <div id="carrito" className="carrito-container">
+                        <Link to="/carrito"> 
                             <i className="fa-solid fa-cart-shopping"></i>
                             {totalItems > 0 && (
                                 <span className="cart-count">{totalItems}</span>
                             )}
+                        </Link>    
                         </div>
                     </li>
                 </ul>
